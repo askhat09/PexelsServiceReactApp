@@ -17,8 +17,8 @@ export default class App extends Component {
   }
 
   renderImage() {
-    this.pexels.getImages("curated").then((photos) => {
-      this.setState({ photos });
+    this.pexels.getImages("curated").then((data) => {
+      this.setState({ photos: data.photos });
       console.log(this.state.photos);
     });
   }
@@ -27,7 +27,7 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <ImageGrid />
+        <ImageGrid images={this.state.photos} />
       </div>
     );
   }
