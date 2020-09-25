@@ -1,0 +1,30 @@
+.hero {
+  background-image: url("https://fpcover.cdnpk.net/image/20200831030849.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  padding: 100px 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.big {
+  display: block;
+  font-size: 36px;
+  margin: 10px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero__content {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 20px;
+}
