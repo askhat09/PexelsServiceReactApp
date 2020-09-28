@@ -7,6 +7,7 @@
   color: #fff;
   text-align: center;
   font-family: "Nunito", sans-serif;
+  margin-bottom: 26px;
 }
 
 .big {
@@ -26,5 +27,5 @@
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 40px;
 }

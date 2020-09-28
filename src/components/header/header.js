@@ -1,22 +1,17 @@
-import React, { Component } from "react";
-import Search from "../search/search";
+import React from "react";
 
 import "./header.css";
 
-export default class Header extends Component {
-  render() {
-    return (
-      <header className="hero">
-        <div className="container">
-          <div className="hero__content">
-            <h1>
-              <span className="big">Графические ресурсы для всех</span>
-              бесплатные векторы, PSD, иконки и фотографии
-            </h1>
-            <Search />
-          </div>
+const Header = (props) => {
+  return (
+    <header className="hero">
+      <div className="container">
+        <div className="hero__content">
+          <h1>The best free stock photos shared by talented creators.</h1>
         </div>
-      </header>
-    );
-  }
-}
+      </div>
+    </header>
+  );
+};
+
+export default Header;

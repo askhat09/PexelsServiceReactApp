@@ -2,11 +2,18 @@
   column-width: 320px;
   column-gap: 15px;
   max-width: 1400px;
-  margin: 50px auto;
+  margin: 0px auto;
 }
 
 .photo-wrap-column-box img {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+}
+.result-title {
+  text-align: center;
+  font-size: 34px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: "Nunito", sans-serif;
 }

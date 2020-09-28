@@ -11,16 +11,12 @@ export default class GotService {
       }
     });
     if (!res.ok) {
-      throw new Error(`Could not fetch ${url}`);
+      throw new Error(`Could not fetch ${this._apiBase}${url}`);
     }
     return res.json();
   };
 
   getImages(terms) {
-    return this.getResource(`/${terms}/`, {
-      params: {
-        per_page: 15
-      }
-    });
+    return this.getResource(`/${terms}/`);
   }
 }
