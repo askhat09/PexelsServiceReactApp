@@ -3,6 +3,7 @@ import Header from "../header/header";
 import ImageGrid from "../imageGrid/imageGrid";
 import GotService from "../../services/pexels";
 import Search from "../search/search";
+import PhotoPage from "../photoPage/photoPage";
 
 import "./app.css";
 
@@ -11,7 +12,9 @@ export default class App extends Component {
 
   state = {
     photos: [],
-    imgTitle: ""
+    imgTitle: "",
+    selectedPhoto: null,
+    modal: false
   };
 
   componentDidMount() {
@@ -41,12 +44,30 @@ export default class App extends Component {
       });
   };
 
+  onPhotoSelected = (id) => {
+    this.setState({ selectedPhoto: id, modal: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ modal: false });
+  };
+
   render() {
     return (
       <div>
         <Header />
         <Search onSubmit={this.onSearchSubmit} />
-        <ImageGrid images={this.state.photos} imgTitle={this.state.imgTitle} />
+        <ImageGrid
+          images={this.state.photos}
+          imgTitle={this.state.imgTitle}
+          onPhotoSelected={this.onPhotoSelected}
+        />
+        <PhotoPage
+          images={this.state.photos}
+          image={this.state.selectedPhoto}
+          onCloseModal={this.onCloseModal}
+          modal={this.state.modal}
+        />
       </div>
     );
   }
