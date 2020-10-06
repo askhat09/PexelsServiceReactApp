@@ -22,7 +22,7 @@ export default class App extends Component {
   }
 
   renderImage() {
-    this.pexels.getImages("curated").then((data) => {
+    this.pexels.getImages("curated?per_page=40").then((data) => {
       this.setState({ photos: data.photos });
       console.log(this.state.photos);
     });
