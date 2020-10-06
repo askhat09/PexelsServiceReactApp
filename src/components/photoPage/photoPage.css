@@ -71,8 +71,102 @@
 }
 .photo-page__photo img {
   background: rgb(73, 73, 73);
-  max-height: 75vh;
-  max-width: calc(49.9955vh);
-  min-height: 300px;
-  min-width: calc(199.982px);
+  max-width: 90%;
+  max-height: 700px;
+}
+
+.photo-page__section--action-bar {
+  margin-bottom: 30px;
+}
+
+.level {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+.level__right,
+.level__left {
+  max-width: 100%;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.level__left {
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+}
+.level__item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.photo-page__mini-profile {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.photo-page__mini-profile__avatar {
+  margin-right: 10px;
+  max-width: 52px;
+  max-height: 52px;
+  min-width: 52px;
+  min-height: 52px;
+}
+.rd__avatar--large img {
+  border-radius: 50%;
+}
+.photo-page__mini-profile__text {
+  max-width: 150px;
+}
+.photo-page__mini-profile__text__title {
+  display: block;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.rd__button {
+  background: #05a081;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  border-color: #05a081;
+  line-height: 1;
+  position: relative;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 11px 24px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
 }

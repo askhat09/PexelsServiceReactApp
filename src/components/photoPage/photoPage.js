@@ -5,7 +5,13 @@ export default class PhotoPage extends React.Component {
   render() {
     const images = this.props.images.map((image) => {
       if (image.id === this.props.image) {
-        return <img key={image.id} src={image.src.large} alt="" />;
+        return <img key={image.id} src={image.src.large2x} alt="" />;
+      }
+    });
+
+    const photographer = this.props.images.map((image) => {
+      if (image.id === this.props.image) {
+        return image.photographer;
       }
     });
 
@@ -32,6 +38,40 @@ export default class PhotoPage extends React.Component {
         </button>
         <div className="modal-content">
           <div className="photo-page">
+            <section className="photo-page__section--action-bar">
+              <div className="level">
+                <div className="level__left">
+                  <div className="level__item">
+                    <div className="js-photo-page-mini-profile-avatar photo-page__mini-profile__avatar rd__avatar rd__avatar--large">
+                      <img
+                        alt="undefined"
+                        height="50"
+                        src="https://images.pexels.com/users/avatars/2441340/-332.jpeg?w=256&amp;h=256&amp;fit=crop&amp;auto=compress"
+                        width="50"
+                      />
+                    </div>
+                    <div className="photo-page__mini-profile__text">
+                      <h3 className="js-photo-page-mini-profile-full-name photo-page__mini-profile__text__title">
+                        {photographer}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="level__right">
+                  <div className="js-photo-page-action-buttons-download">
+                    <a
+                      className="js-download-a-tag rd__button rd__button--download"
+                      download=""
+                      href="/photo/2422560/download/?search_query=&amp;tracking_id=g9vlbjpk5sv"
+                      target="_blank"
+                      data-id="2422560"
+                    >
+                      <span>Бесплатное скачивание</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
             <section className="photo-page-section">
               <div className="photo-page__photo">{images}</div>
             </section>
