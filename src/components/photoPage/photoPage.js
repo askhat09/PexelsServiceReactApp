@@ -15,6 +15,21 @@ export default class PhotoPage extends React.Component {
       }
     });
 
+    const original = this.props.images.map((image) => {
+      if (image.id === this.props.image) {
+        return (
+          <a
+            className="js-download-a-tag rd__button rd__button--download"
+            download
+            href={image.src.original}
+            target="_blank"
+          >
+            <span>Бесплатное скачивание</span>
+          </a>
+        );
+      }
+    });
+
     const modal = this.props.modal ? "modal-overlay" : "modal-overlay hidden";
 
     return (
@@ -59,15 +74,7 @@ export default class PhotoPage extends React.Component {
                 </div>
                 <div className="level__right">
                   <div className="js-photo-page-action-buttons-download">
-                    <a
-                      className="js-download-a-tag rd__button rd__button--download"
-                      download=""
-                      href="/photo/2422560/download/?search_query=&amp;tracking_id=g9vlbjpk5sv"
-                      target="_blank"
-                      data-id="2422560"
-                    >
-                      <span>Бесплатное скачивание</span>
-                    </a>
+                    {original}
                   </div>
                 </div>
               </div>
